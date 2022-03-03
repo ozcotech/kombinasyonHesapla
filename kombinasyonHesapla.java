@@ -12,31 +12,26 @@ public class kombinasyonHesapla {
     for (i = 1; i <= n; i++){
       
       total1 *= i;
-      
     }
-    System.out.println(total1);
-
-
+    
     System.out.print("Bir Sayı Giriniz: ");
     r = input.nextInt();
 
     for (i = 1; i <= r; i++){
       
-      total2 *= i;
-      
+      total2 *= i; 
     }
-    System.out.println(total2);
+    System.out.println("Birinci Sayının Faktoriyeli: " + total1);
+    System.out.println("İkinci Sayının Faktoriyeli: " + total2);
 
     for (j = 1; j <= (n - r); j++){
 
       total3 *= j;
     }
 
-    System.out.println(total3);
-
     kombi = (total1 / (total2 * (total3)));
 
-    System.out.println("Girilen Sayıların Kombinasyonları: " + kombi);
+    System.out.println("Girilen " + n + " ve " + r + " Sayılarının Faktoriyellerinin Kombinasyonları: \n" + kombi);
 
     input.close();
   }
